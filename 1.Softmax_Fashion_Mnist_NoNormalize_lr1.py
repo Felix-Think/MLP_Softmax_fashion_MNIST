@@ -155,7 +155,7 @@ for  epoch in range(epochs):
         loss.backward()
         optimizer.step()
     epoch_accuracy = 100 * running_correct / total
-    epoch_loss = running_loss / len(data_loader)
+    epoch_loss = running_loss / len(train_loader)
     test_loss, test_accuracy = evaluation(model, test_loader, criterion)
     print(f'Epoch: {epoch + 1} / {epochs}: Train Loss: {epoch_loss:.4f} Train Accuracy: {epoch_accuracy:.4f} Test Loss: {test_loss:4f} Test Accuracy: {test_accuracy:4f}')
 
